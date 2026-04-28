@@ -3,9 +3,16 @@
 :root{
     --primary-color:#6d0088dc;
     --second-color: #e6e6e6;
-    --informatica-color:#3275a8;
-    --eletronicos-color:#d63c3c;
+
     --fonte:"Nunito"
+}
+
+.corEletronicos{
+    --eletronicos-color:#d63c3c;
+}
+
+.corInformatica{
+    --informatica-color:#3275a8;
 }
 
 body{
@@ -80,3 +87,9 @@ footer{
     object-fit: cover;
     border-radius: 1 / 1;
 }
+
+.categoria{
+    font-size: 26px;
+    font-weight: bold;
+}
+

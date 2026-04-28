@@ -1,4 +1,4 @@
-[
+export const produtos = [
   {
     "id": 1,
     "nome": "Notebook Dell Inspiron 15 3000",
