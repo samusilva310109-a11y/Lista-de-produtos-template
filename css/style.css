@@ -1,18 +1,20 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
-    --primary-color:#6d0088dc;
+    --primary-color:#6d0088;
     --second-color: #e6e6e6;
-
-    --fonte:"Nunito"
+    --third-color:#c932ee;
+    --eletronicos-color:#2E8B57;
+    --informatica-color:#DAA520;
+    --fonte: Roboto, sans-serif
 }
 
 .corEletronicos{
-    --eletronicos-color:#d63c3c;
+    color: var(--eletronicos-color);
 }
 
 .corInformatica{
-    --informatica-color:#3275a8;
+    color: var(--informatica-color);
 }
 
 body{
@@ -40,9 +42,32 @@ body > footer{
 }
 
 header{
-    background-color: var(--primary-color);
-    color: var(--second-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--third-color));
     display: flex; 
+    justify-content: flex-end;
+}
+
+nav{
+    margin-right: 50px;
+}
+
+nav ul{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    align-items: center;
+}
+
+ul li{
+    font-size: 20px;
+    color: #a9a9a9;
+    transition: all 0.9s ease;
+}
+
+ul li:hover{
+    color: var(--second-color);
+    border-bottom: solid #ffffff 3px;
+    border-radius: 5px;
 }
 
 main{
@@ -69,16 +94,17 @@ footer{
     height: 400px;
     width: 300px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    border-radius: 15px;
-    gap: 10px;
+    border-radius: 15px;    
     padding: 15px;
     font-size: 1em;
     text-align: center;
-   
+    box-shadow: 5px 5px 10px #888888;
+    transition: transform 0.3s ease;
 }
 
 .card img{
@@ -88,8 +114,21 @@ footer{
     border-radius: 1 / 1;
 }
 
+.card:hover, .card:hover img{
+    transform: scale(1.1);
+}
+
 .categoria{
     font-size: 26px;
     font-weight: bold;
+}
+
+.descricao{
+    font-size: 0.9rem;
+}
+
+.preco{
+    color: var(--primary-color);
+    font-weight: 900;
 }
 
