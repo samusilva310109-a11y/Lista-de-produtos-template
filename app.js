@@ -22,12 +22,15 @@ function criarCard(produtos) {
     let categoriaFormat = formatarCategoria(produtos.categoria)    
     categoraiProduto.classList.add(categoriaFormat, 'categoria')
     
+    const avaliacaoProduto = document.createElement('span')
+    avaliacaoProduto.textContent = criarEstrelas(produtos.classificacao)
     
+
     const preco = document.createElement('span')
     preco.textContent = formatarNumero(produtos.preco)
     preco.className = 'preco'
 
-    card.append(imagem, nomeProduto,descricaoProduto, categoraiProduto, preco)
+    card.append(imagem, nomeProduto, descricaoProduto, categoraiProduto, avaliacaoProduto, preco)
 
     return card
 }
@@ -47,6 +50,26 @@ function formatarCategoria(categoria){
     }else if(String(categoria).toLowerCase() == 'Informática'.toLowerCase())
         return 'corInformatica'
 }
+
+function criarEstrelas(avaliacao){
+    let qtdeEstrelasCheias = avaliacao
+    let qtdeEstrelasVazia = 5 - avaliacao
+    let estrelas = ''
+
+    for(let i = 0; i < qtdeEstrelasCheias; i++){
+        estrelas += '★'
+    }
+
+    for(let j = 0; j < qtdeEstrelasVazia; j++){
+        estrelas += '☆'
+    }
+
+    return estrelas
+}
+
+
+console.log(criarEstrelas(2));
+
 
 const cards = produtos.map(criarCard)
 

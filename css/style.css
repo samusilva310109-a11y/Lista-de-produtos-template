@@ -65,17 +65,17 @@ ul li{
 }
 
 ul li:hover{
-    color: var(--second-color);
-    border-bottom: solid #ffffff 3px;
+    color: var(--primary-color);
+    background-color: #ffffff;
+    padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 main{
     background-color: var(--second-color);
     display: grid;
     grid-template-columns: 200px 1fr;
-
-
 }
 main .principal{
     display: flex;
@@ -87,7 +87,7 @@ main .principal{
 
 }
 footer{
-    background-color: #d63c3c;
+    background-color: var(--third-color);
 }
 
 .card{
@@ -131,4 +131,3 @@ footer{
     color: var(--primary-color);
     font-weight: 900;
 }
-
